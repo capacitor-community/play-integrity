@@ -7,6 +7,8 @@ The Play Integrity API is used to verify that your app is a Genuine App Binary t
 
 This plugin calls the Play Integrity API [`requestIntegrityToken`](https://developer.android.com/google/play/integrity/classic) method which returns a token that your App's server must verify with Google Play Servers.
 
+The call `requestIntegrityToken` will return a `token` on success which you must send to your backend for verification. See [Google's Docs on this](https://developer.android.com/google/play/integrity/classic#decrypt-verify).
+
 ## Install
 
 ```bash
@@ -14,6 +16,26 @@ npm install @capacitor-community/play-integrity
 npx cap sync
 ```
 
+## Usage
+
+```typescript
+import { PlayIntegrity } from '@capacitor-community/play-integrity';
+...
+try {
+      // Nonce: See https://developer.android.com/google/play/integrity/classic
+      // googleCloudProjectNumber: leave as 0 for the default for the application
+      // or get from https://console.firebase.google.com/ Project Settings > General
+      const result = await PlayIntegrity.requestIntegrityToken({
+        nonce: nonce,
+        googleCloudProjectNumber: 0
+      });
+      // Use result.token and decrypt and verify the integrity verdict
+      // https://developer.android.com/google/play/integrity/classic#decrypt-verify
+      console.log(`Play Integrity Result`, result);
+    } catch (err) {
+        // Recommendation: Report to backend and exit the application
+    }
+```
 ## API
 
 <docgen-index>
