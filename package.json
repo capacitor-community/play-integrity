@@ -1,6 +1,6 @@
 {
   "name": "@capacitor-community/play-integrity",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Capacitor plugin for the Play Integrity API",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -17,10 +17,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com.git"
+    "url": "git+https://github.com/capacitor-community/play-integrity"
   },
   "bugs": {
-    "url": "https://github.com/issues"
+    "url": "https://github.com/capacitor-community/play-integrity/issues"
   },
   "keywords": [
     "capacitor",

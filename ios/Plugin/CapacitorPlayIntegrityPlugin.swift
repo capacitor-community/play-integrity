@@ -8,7 +8,7 @@ import Capacitor
 @objc(CapacitorPlayIntegrityPlugin)
 public class CapacitorPlayIntegrityPlugin: CAPPlugin {
 
-    @objc func requestIntegrityToken(_ call: CAPPluginCall) {        
+    @objc func requestIntegrityToken(_ call: CAPPluginCall) {
         call.resolve([
             "token": ""
         ])
