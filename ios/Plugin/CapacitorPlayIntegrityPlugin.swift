@@ -7,12 +7,10 @@ import Capacitor
  */
 @objc(CapacitorPlayIntegrityPlugin)
 public class CapacitorPlayIntegrityPlugin: CAPPlugin {
-    private let implementation = CapacitorPlayIntegrity()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
+    @objc func requestIntegrityToken(_ call: CAPPluginCall) {        
         call.resolve([
-            "value": implementation.echo(value)
+            "token": ""
         ])
     }
 }

@@ -6,8 +6,13 @@ export class CapacitorPlayIntegrityWeb
   extends WebPlugin
   implements CapacitorPlayIntegrityPlugin
 {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async requestIntegrityToken(options: {
+    nonce: string;
+    googleCloudProjectNumber: number;
+  }): Promise<{ token: string }> {
+    if (!options.nonce) {
+      throw new Error(`Nonce must be specified`);
+    }
+    return { token: '' };
   }
 }

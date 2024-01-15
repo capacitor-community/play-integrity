@@ -1,7 +1,7 @@
 {
-  "name": "capacitor-play-integrity",
+  "name": "@capacitor-community/play-integrity",
   "version": "0.0.1",
-  "description": "CapacitorPlayIntegrity Capacitor Plugin",
+  "description": "Capacitor plugin for the Play Integrity API",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -11,9 +11,9 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "CapacitorPlayIntegrity.podspec"
+    "CapacitorCommunityPlayIntegrity.podspec"
   ],
-  "author": "me",
+  "author": "Capacitor Community",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -25,7 +25,8 @@
   "keywords": [
     "capacitor",
     "plugin",
-    "native"
+    "native",
+    "play integrity"
   ],
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
