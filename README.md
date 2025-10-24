@@ -36,6 +36,15 @@ try {
         // Recommendation: Report to backend and exit the application
     }
 ```
+
+## Android
+
+### Variables
+
+This plugin will use the following project variables (defined in your app's `variables.gradle` file):
+
+- `googlePlayIntegrityVersion`: version of `com.google.android.play:integrity` (default: `1.3.0`)
+
 ## API
 
 <docgen-index>
