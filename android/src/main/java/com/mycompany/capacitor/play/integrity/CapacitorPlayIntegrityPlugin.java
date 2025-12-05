@@ -35,13 +35,13 @@ public class CapacitorPlayIntegrityPlugin extends Plugin {
             req = IntegrityTokenRequest.builder().setNonce(nonce).setCloudProjectNumber(googleCloudProjectNumber).build();
         }
         Task<IntegrityTokenResponse> integrityTokenResponse = integrityManager.requestIntegrityToken(req);
-        integrityTokenResponse.addOnSuccessListener(integrityTokenResponse1 -> {
+        integrityTokenResponse.addOnSuccessListener((integrityTokenResponse1) -> {
             String integrityToken = integrityTokenResponse1.token();
             JSObject ret = new JSObject();
             ret.put("token", integrityToken);
             call.resolve(ret);
         });
-        integrityTokenResponse.addOnFailureListener(e -> {
+        integrityTokenResponse.addOnFailureListener((e) -> {
             call.reject(e.getMessage());
         });
     }
