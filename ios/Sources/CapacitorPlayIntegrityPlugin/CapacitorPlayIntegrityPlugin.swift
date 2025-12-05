@@ -7,11 +7,11 @@ import Capacitor
  */
 @objc(CapacitorPlayIntegrityPlugin)
 public class CapacitorPlayIntegrityPlugin: CAPPlugin, CAPBridgedPlugin {
-    public let identifier = "CapacitorPlayIntegrityPlugin" 
-    public let jsName = "CapacitorPlayIntegrity" 
+    public let identifier = "CapacitorPlayIntegrityPlugin"
+    public let jsName = "CapacitorPlayIntegrity"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "requestIntegrityToken", returnType: CAPPluginReturnPromise),
-    ] 
+        CAPPluginMethod(name: "requestIntegrityToken", returnType: CAPPluginReturnPromise)
+    ]
 
     @objc func requestIntegrityToken(_ call: CAPPluginCall) {
         call.resolve([
