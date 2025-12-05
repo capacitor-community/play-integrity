@@ -43,7 +43,7 @@ try {
 
 This plugin will use the following project variables (defined in your app's `variables.gradle` file):
 
-- `googlePlayIntegrityVersion`: version of `com.google.android.play:integrity` (default: `1.5.0`)
+- `googlePlayIntegrityVersion`: version of `com.google.android.play:integrity` (default: `1.6.0`)
 
 ## API
 
